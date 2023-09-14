@@ -1,4 +1,4 @@
-# Docker solutions
+# Docker lecture supplement
 This document provides the terminal commands for the steps and assignments from the Docker lectures. 
 Explanations of the Docker commands and corresponding options can be found in the lecture slides or in the file [Basic Docker Commands](Basic%20Docker%20Commands.md).
 
