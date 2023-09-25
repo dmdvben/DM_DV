@@ -72,7 +72,7 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 ```
 **Example**
 ```bash
-docker run -d -p 8787:8787 -e PASSWORD=MyPassword --name rstudio -v rstudio_data:/home/rstudio rocker/rstudio
+docker run -d -p 8787:8787 -e PASSWORD=au_dm_dv_student! --name rstudio -v rstudio_data:/home/rstudio rocker/rstudio
 ```
 ---
 #### `docker exec`
