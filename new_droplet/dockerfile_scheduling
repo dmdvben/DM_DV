@@ -1,0 +1,13 @@
+# Start from the rocker/tidyverse image which has R, RStudio and tidyverse pre-installed
+FROM rocker/tidyverse
+
+# The RUN command executes shell commands during the image building process.
+RUN apt-get update && apt-get install -y \
+	git \
+	cron
+# We let "rstudio" user execute commands as any user (including sudo) from all terminals without being prompted for password
+# The command makes it easier to follow the teaching, but is not recommended in an actual production environment
+RUN echo "rstudio ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+# Install R packages using R's built-in 'install.packages' function.
+RUN R -e 'install.packages(c("DBI", "RPostgres", "httr2", "shiny", "jsonlite", "cronR", "miniUI", "shinyFiles"))'

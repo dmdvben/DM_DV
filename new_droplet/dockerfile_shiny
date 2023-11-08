@@ -1,0 +1,16 @@
+# Start from the Rocker/Shiny base image
+FROM rocker/shiny
+
+# Install R packages
+RUN apt-get update && apt-get install -y \
+    libpq-dev
+	
+# Install R packages using R's built-in 'install.packages' function.
+RUN R -e 'install.packages(c("DBI", "RPostgres", "ggplot2"))'
+
+# Expose the default Shiny Server port
+EXPOSE 3838
+
+# Start Shiny Server
+CMD ["/usr/bin/shiny-server"]
+
