@@ -50,6 +50,22 @@ Remember to create your own password in the code below
 ```bash
 docker run -d -p 8787:8787 -e PASSWORD=ThisIs4ThePassword --name rstudio -v rstudio_data:/home/rstudio rocker/rstudio
 ```
+## Slide 24
+```bash
+docker stop rstudio
+```
+```bash
+docker rm rstudio
+```
+Remember to create your own password in the code below
+```bash
+docker run -d -p 8787:8787 -e PASSWORD=ThisIs4ThePassword --name rstudio -v rstudio_data:/home/rstudio rocker/rstudio
+```
+## Slide 25
+```bash
+docker exec -it rstudio /bin/bash
+```
+
 ## Slide 26 
 ```bash
 docker pull rocker/shiny
@@ -77,6 +93,9 @@ docker network connect db_r_shiny rstudio
 Remember to create your own password in the code below
 ```bash
 docker run -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=ThisIs4ThePassword -e POSTGRES_USER=postgres -d -v postgres_data:/var/lib/postgresql/data postgres
+```
+```bash
+docker network connect db_r_shiny postgres
 ```
 
 ## Slide 37
