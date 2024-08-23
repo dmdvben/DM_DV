@@ -1,5 +1,5 @@
 # Database Management and Data Visualization
-Code and files related to the course in Database Management and Data Visualization
+Code and files related to the course in Database Management and Data Visualization.
 
 This repository has three files with command and code snippets to help you get a quick overview of the material we have been through in the first part of the course. The files and their content is
 
