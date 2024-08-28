@@ -1,3 +1,5 @@
+This file provides the code snippets used in class and is ordered by the slide set and slide number in which they appear. 
+
 # Docker I
 ## Slide 5
 ```bash
