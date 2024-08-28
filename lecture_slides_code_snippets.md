@@ -2,6 +2,11 @@ This file provides the code snippets used in class and is ordered by the slide s
 
 # Docker I
 ## Slide 5
+
+These commands are used for installing Docker on Ubuntu-based systems. It is not essential to understand these in detail, we just need them to get Docker up and running.
+You can just copy the entire code-block below into the Ubuntu terminal (remember to right click and then select paste - do not use Ctrl+v), and then press enter. 
+Answer Y to all prompts, and press Enter when purple screens appear.
+
 ```bash
 sudo apt install gnome-terminal
 
@@ -23,6 +28,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 sudo docker run hello-world
 ```
+
+The installation is successful if you get a message beginning with: "Hello from Docker". 
+
 ## Slide 17
 ```bash
 docker ps
@@ -62,10 +70,21 @@ docker rm rstudio
 Remember to create your own password in the code below
 ```bash
 docker run -d -p 8787:8787 -e PASSWORD=ThisIs4ThePassword --name rstudio -v rstudio_data:/home/rstudio rocker/rstudio
+
+The purpose of the steps in this slide are:  1) To create a file in the shared volume, 2) To see that a package installed manually in a container does not persist after the container is stopped, 3) To use FileZilla to locate a file in your Ubuntu directory. 
+The commands run in the terminal first stop the rstudio container, then remove the rstudio container, and then runs the container again.
+
 ```
 ## Slide 25
 ```bash
 docker exec -it rstudio /bin/bash
+```
+
+```bash
+id rstudio
+```
+```bash
+exit
 ```
 
 ## Slide 26 
