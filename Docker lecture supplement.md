@@ -53,7 +53,7 @@ chmod o+rw /var/lib/docker/volumes/rstudio_data/_data
 
 ## Run Rstudio container
 ```Bash
-docker run -d -p 8787:8787 -e PASSWORD=au_dm_dv_student! --name rstudio -v rstudio_data:/home/rstudio rocker/rstudio
+docker run -d -p 8787:8787 -e PASSWORD=ThisIs4ThePassword --name rstudio -v rstudio_data:/home/rstudio rocker/rstudio
 ```
 
 ## Verify persistent storage
@@ -67,7 +67,7 @@ docker stop rstudio
 docker rm rstudio
 ```
 ```bash
-docker run -d -p 8787:8787 -e PASSWORD=au_dm_dv_student! --name rstudio -v rstudio_data:/home/rstudio rocker/rstudio
+docker run -d -p 8787:8787 -e PASSWORD=ThisIs4ThePassword --name rstudio -v rstudio_data:/home/rstudio rocker/rstudio
 ```
 ## Entering a container
 ```bash
@@ -96,7 +96,7 @@ docker network connect db_r_shiny rstudio
 ```
 ## Run Postgresql container and connect to the network
 ```bash
-docker run -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=au_dm_dv_student! -e POSTGRES_USER=postgres -d -v postgres_data:/var/lib/postgresql/data postgres
+docker run -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=ThisIs4ThePassword -e POSTGRES_USER=postgres -d -v postgres_data:/var/lib/postgresql/data postgres
 ```
 ```bash
 docker network connect db_r_shiny postgres
@@ -135,7 +135,7 @@ docker ps
 docker rm -f rstudio
 ```
 ```bash
-docker run -d --network db_r_shiny -p 8787:8787 -e PASSWORD=au_dm_dv_student! --name rstudio -v rstudio_data:/home/rstudio rstudio:1.0.0
+docker run -d --network db_r_shiny -p 8787:8787 -e PASSWORD=ThisIs4ThePassword --name rstudio -v rstudio_data:/home/rstudio rstudio:1.0.0
 ```
 ### Docker II - Assignment I
  
@@ -159,7 +159,7 @@ docker image build --tag rstudio:1.0.1 -f dockerfile2_rstudio .
 docker rm -f rstudio
 ```
 ```bash
-docker run -d --network db_r_shiny -p 8787:8787 -e PASSWORD=au_dm_dv_student! --name rstudio -v rstudio_data:/home/rstudio rstudio:1.0.1
+docker run -d --network db_r_shiny -p 8787:8787 -e PASSWORD=ThisIs4ThePassword --name rstudio -v rstudio_data:/home/rstudio rstudio:1.0.1
 ```
 ## tar files
 
@@ -176,6 +176,6 @@ docker rmi rstudio:1.0.1
 docker load -i rstudio_1_0_1.tar
 ```
 ```bash
-docker run -d --network db_r_shiny -p 8787:8787 -e PASSWORD=au_dm_dv_student! --name rstudio -v rstudio_data:/home/rstudio rstudio:1.0.1
+docker run -d --network db_r_shiny -p 8787:8787 -e PASSWORD=ThisIs4ThePassword --name rstudio -v rstudio_data:/home/rstudio rstudio:1.0.1
 ```
 
