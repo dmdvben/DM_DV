@@ -133,6 +133,8 @@ docker network inspect db_r_shiny
 ## Slide 5
 ```bash
 docker image ls
+```
+```bash
 docker rmi [name_of_image/repository]:[TAG]
 ```
 ## Slide 9
@@ -142,12 +144,20 @@ docker image build --tag rstudio:1.0.0 -f dockerfile_rstudio .
 ## Slide 10
 ```bash
 docker ps
+```
+
+```bash
 docker rm -f rstudio
+```
+
+```bash
 docker run -d --network db_r_shiny -p 8787:8787 -e PASSWORD=ThisIs4ThePassword --name rstudio -v rstudio_data:/home/rstudio rstudio:1.0.0
 ```
 ## Slide 14
 ```bash
 docker save -o rstudio_1_0_0.tar rstudio:1.0.0
+```
+```bash
 docker load -i /path/to/your-image-file.tar
 ```
 
