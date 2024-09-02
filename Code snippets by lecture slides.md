@@ -124,4 +124,38 @@ docker network connect db_r_shiny postgres
 docker network inspect db_r_shiny
 ```
 
+# Docker II
+## Slide 5
+```bash
+docker image ls
+docker rmi [name_of_image/repository]:[TAG]
+```
+## Slide 8
+```bash
+# Start from the rocker/rstudio base image which has R and RStudio pre-installed
+FROM rocker/rstudio
+
+# The RUN command executes shell commands during the image building process.
+RUN apt-get update && apt-get install -y \
+	git
+
+# Install R packages using R's built-in 'install.packages' function.
+RUN R -e 'install.packages(c("DBI", "RPostgres"))'
+```
+## Slide 9
+```bash
+docker image build --tag rstudio:1.0.0 -f dockerfile_rstudio .
+```
+## Slide 10
+```bash
+docker ps
+docker rm -f rstudio
+docker run -d --network db_r_shiny -p 8787:8787 -e PASSWORD=ThisIs4ThePassword --name rstudio -v rstudio_data:/home/rstudio rstudio:1.0.0
+```
+## Slide 14
+```bash
+docker save -o rstudio_1_0_0.tar rstudio:1.0.0
+docker load -i /path/to/your-image-file.tar
+```
+
 
