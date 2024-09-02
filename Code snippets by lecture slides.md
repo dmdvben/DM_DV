@@ -135,18 +135,6 @@ docker network inspect db_r_shiny
 docker image ls
 docker rmi [name_of_image/repository]:[TAG]
 ```
-## Slide 8
-```bash
-# Start from the rocker/rstudio base image which has R and RStudio pre-installed
-FROM rocker/rstudio
-
-# The RUN command executes shell commands during the image building process.
-RUN apt-get update && apt-get install -y \
-	git
-
-# Install R packages using R's built-in 'install.packages' function.
-RUN R -e 'install.packages(c("DBI", "RPostgres"))'
-```
 ## Slide 9
 ```bash
 docker image build --tag rstudio:1.0.0 -f dockerfile_rstudio .
