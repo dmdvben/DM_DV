@@ -2,7 +2,7 @@ This file provides the code snippets used in class and is ordered by the slide s
 
 ## Table of Contents
 1. [Docker I](#docker-i)
-2. Docker II(#docker-ii)
+2. [Docker II](#docker-ii)
 ---
 
 # Docker I
