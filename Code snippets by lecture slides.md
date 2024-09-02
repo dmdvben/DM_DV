@@ -1,5 +1,10 @@
 This file provides the code snippets used in class and is ordered by the slide set and slide number in which they appear. 
 
+## Table of Contents
+1. Docker I
+2. Docker II
+
+
 # Docker I
 ## Slide 5
 
