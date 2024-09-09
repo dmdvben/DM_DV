@@ -3,6 +3,7 @@ This file provides the code snippets used in class and is ordered by the slide s
 ## Table of Contents
 1. [Docker I](#docker-i)
 2. [Docker II](#docker-ii)
+3. [Git](#git)
 ---
 
 # Docker I
@@ -164,4 +165,26 @@ docker load -i /path/to/your-image-file.tar
 ```bash
 docker image prune
 ```
+
+# Git
+
+## Slide 21
+```bash
+git config --global user.name [username_from_github]
+```
+
+```bash
+git config --global user.email [email_from_github]  
+```
+
+```bash
+git config --global credential.helper store
+```
+
+```bash
+git config --list 
+```
+
+
+
 
