@@ -75,11 +75,11 @@ docker rm rstudio
 Remember to create your own password in the code below
 ```bash
 docker run -d -p 8787:8787 -e PASSWORD=ThisIs4ThePassword --name rstudio -v rstudio_data:/home/rstudio rocker/rstudio
+```
 
 The purpose of the steps in this slide are:  1) To create a file in the shared volume, 2) To see that a package installed manually in a container does not persist after the container is stopped, 3) To use FileZilla to locate a file in your Ubuntu directory. 
 The commands run in the terminal first stop the rstudio container, then remove the rstudio container, and then runs the container again.
 
-```
 ## Slide 25
 ```bash
 docker exec -it rstudio /bin/bash
