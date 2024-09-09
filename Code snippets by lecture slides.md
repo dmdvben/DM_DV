@@ -185,6 +185,32 @@ git config --global credential.helper store
 git config --list 
 ```
 
+## Slide 22
 
+```bash
+git branch -M main 
+```
+
+```bash
+git remote add origin [the-HTTP-link]
+```
+
+## Slide 23
+
+```bash
+git push -u origin main
+```
+
+## Slide 24
+
+```bash
+git config pull.rebase false
+```
+
+## Slide 27
+
+```bash
+git clone [the-HTTP-link]
+```
 
 
