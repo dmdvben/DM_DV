@@ -207,6 +207,12 @@ git push -u origin main
 git config pull.rebase false
 ```
 
+## Slide 26
+
+```bash
+git rm --cached [name_of_file_added_to_.gitignore]
+```
+
 ## Slide 27
 
 ```bash
