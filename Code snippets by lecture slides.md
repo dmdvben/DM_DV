@@ -160,7 +160,7 @@ docker save -o rstudio_1_0_0.tar rstudio:1.0.0
 ```bash
 docker load -i /path/to/your-image-file.tar
 ```
-## Slide 1
+## Slide 15
 ```bash
 docker image prune
 ```
